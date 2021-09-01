@@ -36,7 +36,7 @@
                                                     <label for="inputFinishTime">Finish Time</label>
                                                     <input type="time"  name="finish_time" class="form-control">
                                                 </div>
-                                                <div>
+                                                <div class="form-group col-md-6">
                                                     <select
                                                         class="form-select form-select-sm"
                                                         aria-label=".form-select-sm example"
