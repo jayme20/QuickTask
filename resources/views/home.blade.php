@@ -20,7 +20,10 @@
                            <div class="row">
                                 <div class="col">
                                     <select class="form-control" name="date" id="date">
-                                        <option selected="false">Date</option>
+                                        @foreach ($dates as $date)
+                                        <option value="{{ $date->id }}">{{ $date->date }}</option>
+                                        @endforeach
+                                        
                                     </select>
                                 </div>
                                 <div class="col">
