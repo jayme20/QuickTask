@@ -28,7 +28,10 @@
                                 </div>
                                 <div class="col">
                                     <select class="form-control" name="time" id="time">
-                                        <option selected="false">Time</option>
+                                        @foreach ($appointments as $appointment_time)
+                                        <option value="{{ $appointment_time->id }}">{{ $appointment_time->appointment_time }}</option>
+                                        @endforeach
+                                        
                                     </select>
                                 </div>
                           </div>
