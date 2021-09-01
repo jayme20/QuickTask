@@ -18,7 +18,7 @@ class CreateSchedulesTable extends Migration
             $table->date('date');
             $table->time('start_time');
             $table->time('finish_time');
-            $table->enum('slots', ['30 Minutes', '1 Hour']);
+            $table->enum('slots', ['30 Minutes', '60 Minutes']);
             $table->timestamps();
         });
     }

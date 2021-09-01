@@ -28,10 +28,10 @@
                                 </div>
                                 <div class="col">
                                     <select class="form-control" name="time" id="time">
-                                        @foreach ($appointments as $appointment_time)
-                                        <option value="{{ $appointment_time->id }}">{{ $appointment_time->appointment_time }}</option>
+                                        @foreach ($slots as $slot)
+                                        <option selected>{{ $slot->appointment_time }}</option> 
                                         @endforeach
-                                        
+    
                                     </select>
                                 </div>
                           </div>

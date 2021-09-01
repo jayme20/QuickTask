@@ -57,10 +57,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                       <h1>name</h1>
-                       <p>Reason</p>
+                    <div class="card" >
+                        <div class="card-body">
+                          <h5 class="card-title">{{ $appointment->name }}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">
+                              <div>{{ $appointment->date }}</div>
+                              <div>{{ $appointment->time }}</div>
+                          </h6>
+                          <p class="card-text">{{ $appointment->reason }}</p>
+                         <hr />
+                          <div >
+                            <button type="button" class="btn btn-success">Accept</button>
+                            <button type="button" class="btn btn-danger mr-4">Decline</button>
+                          </div>
+                        </div>
                     </div>
+                   
                 </div>
             </div>
         </div>

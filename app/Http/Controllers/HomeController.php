@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Schedule;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,11 +26,16 @@ class HomeController extends Controller
     public function index()
     {
         $dates = Schedule::all();
-        return view('home')->with('dates', $dates);
+        $slots = DB::table('time_slots')->get();
+        return view('home', [
+            'dates' => $dates,
+            'slots' => $slots
+        ]);
     }
 
     public function handleDoctor()
     {
-        return view('handleDoctor');
+        $appointments = Appointment::all();
+        return view('handleDoctor', $appointments);
     }
 }
